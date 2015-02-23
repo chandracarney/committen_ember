@@ -12,9 +12,6 @@
     "build": "ember build",
     "test": "ember test"
   },
-  after_script: {
-    - cat lcov.info | codeclimate
-  },
   "repository": "",
   "engines": {
     "node": ">= 0.10.0"
