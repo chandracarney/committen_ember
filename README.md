@@ -1,6 +1,7 @@
 # Hot-streak
 
 [![Build Status](https://travis-ci.org/trayo/hot_streak.svg?branch=master)](https://travis-ci.org/trayo/hot_streak)
+[![Code Climate](https://codeclimate.com/github/trayo/hot_streak/badges/gpa.svg)](https://codeclimate.com/github/trayo/hot_streak)
 
 Created by: Chandra Carney, Sam Kuhlmann and Travis Yoder
 
