@@ -18,3 +18,10 @@ install:
 
 script:
   - npm test
+
+addons:
+  code_climate:
+    repo_token: 50e0f3eaa6d17f86c268ba7d062d0355975a285970576cc22b1c8d6c43f18086
+
+notifications:
+  email: false
