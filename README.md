@@ -1,5 +1,7 @@
 # Hot-streak
 
+[![Build Status](https://travis-ci.org/trayo/hot_streak.svg?branch=master)](https://travis-ci.org/trayo/hot_streak)
+
 Created by: Chandra Carney, Sam Kuhlmann and Travis Yoder
 
 This README outlines the details of collaborating on this Ember application.
