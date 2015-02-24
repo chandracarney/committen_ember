@@ -15,4 +15,12 @@
   {{/each}}
 </div>
 
-
+<div class="goals">
+  {{#each goal in goals}}
+    <p>{{goal.title}}</p>
+    <p>{{goal.description}}</p>
+    <p>{{goal.startDate}}</p>
+    <p>{{goal.endDate}}</p>
+    <p>{{goal.dailyQuantity}}</p>
+  {{/each}}
+</div>
