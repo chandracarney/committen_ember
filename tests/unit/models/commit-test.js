@@ -4,7 +4,7 @@ import {
 } from 'ember-qunit';
 
 moduleForModel('commit', {
-  needs: ['model:user']
+  needs: ['model:user', 'model:goal']
 });
 
 test('it exists', function(assert) {
