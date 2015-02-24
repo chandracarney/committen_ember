@@ -6,3 +6,13 @@
   <p>{{email}}</p>
   <p>{{phone}}</p>
 </div>
+
+<div class="commits">
+  {{#each commit in commits}}
+    <p>{{commit.date}}</p>
+    <p>{{commit.message}}</p>
+    <p>{{commit.url}}</p>
+  {{/each}}
+</div>
+
+
