@@ -2,9 +2,23 @@
 
 <div class="user">
   <img {{bind-attr src=thumbnailUrl}}>
-  <p>{{name}}</p>
-  <p>{{email}}</p>
-  <p>{{phone}}</p>
+  {{#if editing}}
+    <label>Username</label>
+    {{input type="text" value=name}}
+    <label>Email address</label>
+    {{input type="text" value=email}}
+    <label>Phone number</label>
+    {{input type="text" value=phone}}
+    <label>Twitter handle</label>
+    {{input type="text" value=twitter}}
+    <button {{action 'stopEditing'}}>Finish Editing</button>
+  {{else}}
+    <p>{{name}}</p>
+    <p>{{email}}</p>
+    <p>{{phone}}</p>
+    <p>{{twitter}}</p>
+    <button {{action 'startEditing'}}>Edit Note</button>
+  {{/if}}
 </div>
 
 <div class="commits">
