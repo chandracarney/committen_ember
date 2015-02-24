@@ -1,1 +1,8 @@
-<h3>Dashboard</h3>
+<h3>Users</h3>
+{{#each user in model}}
+<div class="user">
+<img {{bind-attr src=user.thumbnailUrl}}>
+<p>{{user.name}}</p>
+<p>{{user.email}}</p>
+</div>
+{{/each}}
