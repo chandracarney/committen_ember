@@ -11,6 +11,7 @@ Router.map(function() {
   this.resource('users', function() {});
 
   this.route('user', { path: 'users/:user_id' });
+  this.resource('commits', function() {});
 });
 
 
