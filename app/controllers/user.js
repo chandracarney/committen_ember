@@ -6,13 +6,13 @@ export default Ember.ObjectController.extend({
 
   actions: {
 
-    startEditing: function () {
+    startEditing: function() {
       this.set('editing', true);
     },
 
-    stopEditing: function () {
+    stopEditing: function() {
       var user = this.get('model');
-      user.save().then(function () {
+      user.save().then(function() {
         this.set('editing', false);
       }.bind(this));
     }
