@@ -49,4 +49,8 @@
     {{input type="checkbox" checked=goal.completed}}
     <p>{{goal.dailyQuantity}}</p>
   {{/each}}
+  {{#link-to 'goal.new'}}
+    Make a goal
+  {{/link-to}}
+  {{outlet}}
 </div>

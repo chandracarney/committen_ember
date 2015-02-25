@@ -1,0 +1,15 @@
+<h3>New Goal</h3>
+
+<div class="row">
+  <label>Title</label>
+  {{input type="text" value=title}}
+  <label>Description</label>
+  {{textarea value=description}}
+  <label>Start Date</label>
+  {{input type="date" value=startDate}}
+  <label>End Date</label>
+  {{input type="date" value=endDate}}
+  <label>Number of commits per day</label>
+  {{input type="number" value=dailyQuantity}}
+  <button {{action 'stopEditing'}}>Submit</button>
+</div>
