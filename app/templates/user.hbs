@@ -33,8 +33,20 @@
   {{#each goal in goals}}
     <p>{{goal.title}}</p>
     <p>{{goal.description}}</p>
-    <p>{{goal.startDate}}</p>
-    <p>{{goal.endDate}}</p>
+    <p>Start date: {{goal.startDate}}</p>
+    <p>End date: {{goal.endDate}}</p>
+    <p>Commits per day: {{goal.dailyQuantity}}</p>
+    <label>Mark as completed</label>
+      {{input type="checkbox" checked=goal.completed}}
+    <p>
+      {{#if goal.completed}}
+        This goal is complete!
+      {{else}}
+        You're still working on this goal
+      {{/if}}
+    </p>
+    <label>Mark as completed</label>
+    {{input type="checkbox" checked=goal.completed}}
     <p>{{goal.dailyQuantity}}</p>
   {{/each}}
 </div>
