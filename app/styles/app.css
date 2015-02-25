@@ -1,0 +1,75 @@
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700);
+@import url(https://fonts.googleapis.com/css?family=Gentium+Basic:400,700);
+
+body {
+  background-color: white;
+}
+
+p {
+  font-family: 'Gentium Basic', serif;
+  color: #5B585A;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', sans-serif;
+  color: #5B585A;
+}
+
+.button {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+
+#header {
+  max-width: 100%;
+  padding: 25px;
+  height: 80px;
+  margin-bottom: 90px;
+}
+
+#home-headline {
+  text-align: center;
+}
+
+#home-headline h1 {
+  font-weight: 900;
+  font-size: 150px;
+  line-height: 70px;
+  color: #84BD97;
+  letter-spacing: -5px;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
+
+#home-headline p {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+#home-content {
+  text-align: center;
+}
+
+#home-button {
+  margin: 50px;
+  text-align: center;
+}
+.large-content {
+  font-size: 20px;
+}
+
+#logo {
+  color: #F04E22;
+}
+
+.primary-btn {
+  background-color: #F04E22;
+  color: #ECF0D6;
+}
+
+.primary-btn:hover {
+  background-color: #ECF0D6;
+}
+
+

@@ -12,7 +12,8 @@
     "ember-qunit": "0.2.8",
     "ember-qunit-notifications": "0.0.7",
     "qunit": "~1.17.1",
-    "foundation": "~5.5.1"
+    "foundation": "~5.5.1",
+    "font-awesome": "~4.3.0"
   },
   "resolutions": {
     "jquery": ">= 2.1.0"
