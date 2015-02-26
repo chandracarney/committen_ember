@@ -5,54 +5,21 @@
   </div>
 </div>
 
-<div id="lineChart" style="width: 700px; height: 250px"></div>
-  <script>
-    $('#lineChart').epoch({
-    type: 'line',
-    data: lineChartData
-    });
-</script>
-
 <div class="row">
-  <h6>Commit History</h6>
-  {{#each commit in commits}}
-  <div class="small-6 columns">
-    <p>{{commit.date}}</p>
-    <p>{{commit.message}}</p>
-    <a href="">Check me out on GitHub</a>
+  <div class="small-4 column">
+    {{user-profile user=content}}
   </div>
-  {{/each}}
-</div>
 
-
-<div class="row">
-  <img {{bind-attr src=thumbnailUrl}}>
-  {{#if editing}}
-    <label>Username</label>
-    {{input type="text" value=name}}
-    <label>Email Address</label>
-    {{input type="text" value=email}}
-    <label>Phone Number</label>
-    {{input type="text" value=phone}}
-    <label>Twitter Handle</label>
-    {{input type="text" value=twitter}}
-    <button {{action 'stopEditing'}}>Finish Editing</button>
-  {{else}}
-    <p>{{name}}</p>
-    <p>{{email}}</p>
-    <p>{{phone}}</p>
-    <p>{{twitter}}</p>
-    <button {{action 'startEditing'}}>Edit Note</button>
-  {{/if}}
-</div>
-
-
-<div class="row">
-  {{#each commit in commits}}
-    <p>{{commit.date}}</p>
-    <p>{{commit.message}}</p>
-    <p>{{commit.url}}</p>
-  {{/each}}
+  <div class="small-8 column">
+    <h6>Commit History</h6>
+    {{#each commit in commits}}
+    <div class="small-6 columns">
+      <p>{{commit.date}}</p>
+      <p>{{commit.message}}</p>
+      <a href="">Check me out on GitHub</a>
+    </div>
+    {{/each}}
+  </div>
 </div>
 
 <div class="row">
