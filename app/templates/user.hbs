@@ -1,7 +1,6 @@
 <div id="subheader" class="row">
-  <div class="small-7 columns"></div>
-  <div class="small-5 columns">
-    <h6><span class="hot">Commiten</span>Dashboard</h6>
+  <div class="small-11 end columns">
+    <h6><span class="hot">Committen</span>Dashboard</h6>
   </div>
 </div>
 
@@ -13,23 +12,33 @@
   <div class="small-8 column">
     <h6>Commit History</h6>
     {{#each commit in commits}}
-    <div class="small-6 columns">
+    <div class="small-12 columns">
       <p>{{commit.date}}</p>
       <p>{{commit.message}}</p>
       <a href="">Check me out on GitHub</a>
     </div>
     {{/each}}
+
+    {{#if goals}}
+      <h3>Your Goals</h3>
+      {{#each goal in goals}}
+        <div class="small-6 columns">
+          {{user-goal goal=goal}}
+        </div>
+      {{/each}}
+
+      {{#link-to 'goal.new' class="button primary-btn"}}
+      Make a New Goal
+      {{/link-to}}
+
+      {{outlet}}
+    {{else}}
+    <h4>You don't have any goals... you're lazy</h4>
+      {{#link-to 'goal.new' class="button primary-btn"}}
+      Make a goal
+      {{/link-to}}
+    {{/if}}
+
   </div>
 </div>
 
-<div class="row">
-  {{#each goal in goals}}
-  <div class="small-6 columns">
-    {{user-goal goal=goal}}
-  </div>
-  {{/each}}
-  {{#link-to 'goal.new'}}
-    Make a goal
-  {{/link-to}}
-  {{outlet}}
-</div>

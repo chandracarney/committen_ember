@@ -8,6 +8,10 @@ let User = DS.Model.extend({
   twitter: DS.attr('string'),
   commits: DS.hasMany('commit', { async: true }),
   goals: DS.hasMany('goal', { async: true }),
+
+  numberOfGoals: function() {
+    return this.get('goals.length');
+  }.property('goals')
 });
 
 User.reopenClass({
@@ -32,6 +36,16 @@ User.reopenClass({
       "commits": [3],
       "goals": [2,3],
     },
+    {
+      "id": 3,
+      "name": "Chandra Carney",
+      "thumbnailUrl": "https://avatars3.githubusercontent.com/u/8561841?v=3&s=460",
+      "email": "chandra@example.com",
+      "phone": "3333333333",
+      "twitter": "@chandracarney",
+      "commits": [1,2],
+    },
+
   ]
 });
 
