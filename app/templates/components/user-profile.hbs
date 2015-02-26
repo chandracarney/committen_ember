@@ -1,20 +1,21 @@
-<img {{bind-attr src=user.thumbnailUrl}}>
+<img {{bind-attr src=user.thumbnailUrl}} class="profile-img">
 
 {{#if editing}}
-  <label>Username</label>
-  {{input type="text" value=user.name}}
-  <label>Email Address</label>
-  {{input type="text" value=user.email}}
-  <label>Phone Number</label>
-  {{input type="text" value=user.phone}}
-  <label>Twitter Handle</label>
-  {{input type="text" value=user.twitter}}
-  <button {{action 'stopEditing'}}>Finish Editing</button>
+  <div id="edit-form">
+    <label>Username</label>
+    {{input type="text" value=user.name}}
+    <label>Email Address</label>
+    {{input type="text" value=user.email}}
+    <label>Twitter Handle</label>
+    {{input type="text" value=user.twitter}}
+    <button {{action 'stopEditing'}} class="button tiny secondary-btn">Finish Editing</button>
+  </div>
 {{else}}
-  <p>{{user.name}}</p>
-  <p>{{user.email}}</p>
-  <p>{{user.phone}}</p>
-  <p>{{user.twitter}}</p>
-  <button {{action 'startEditing'}}>Edit Profile</button>
+  <h3><i class="fa fa-github-square cool"></i> {{user.name}}</h3>
+  <hr>
+  <h5><i class="fa fa-envelope cool"></i> {{user.email}}</h5>
+  <h5><i class="fa fa-twitter-square fa-lg cool"></i> {{user.twitter}}</h5>
+  <hr>
+  <button {{action 'startEditing'}} class="button tiny secondary-btn">Edit Profile</button>
 {{/if}}
 
