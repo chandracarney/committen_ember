@@ -137,3 +137,7 @@ hr {
   color: grey;
 }
 
+#goal-box {
+  border: 1px solid #93AEA6;
+  padding: 15px;
+}

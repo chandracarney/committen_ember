@@ -50,4 +50,8 @@ test('it has a twitter property', function(assert) {
   assert.ok(property.isAttribute);
 });
 
-
+test('it has a numberOfGoals property', function(assert) {
+  var user = this.subject({
+  });
+  assert.strictEqual(user.get('numberOfGoals'), 0);
+});

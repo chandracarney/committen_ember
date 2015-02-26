@@ -1,16 +1,16 @@
-<p>{{goal.title}}</p>
-<p>{{goal.description}}</p>
-<p>Start date: {{goal.startDate}}</p>
-<p>End date: {{goal.endDate}}</p>
-<p>Commits per day: {{goal.dailyQuantity}}</p>
-<label>Mark as completed</label>
-{{input type="checkbox" checked=goal.completed action="markCompleted"}}
-<p>
-{{#if goal.completed}}
-  This goal is complete!
-{{else}}
-  You're still working on this goal
-{{/if}}
-</p>
-<p>{{goal.dailyQuantity}}</p>
-
+<div id="goal-box">
+  <p>{{goal.title}}</p>
+  <p>{{goal.description}}</p>
+  <p>Start date: {{goal.startDate}}</p>
+  <p>End date: {{goal.endDate}}</p>
+  <p>Commits per day: {{goal.dailyQuantity}}</p>
+  <label>Mark as completed</label>
+  {{input type="checkbox" checked=goal.completed action="markCompleted"}}
+  <p>
+  {{#if goal.completed}}
+    This goal is complete!
+  {{else}}
+    You're still working on this goal
+  {{/if}}
+  </p>
+</div>
