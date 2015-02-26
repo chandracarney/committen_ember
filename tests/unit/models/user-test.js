@@ -51,7 +51,6 @@ test('it has a twitter property', function(assert) {
 });
 
 test('it has a numberOfGoals property', function(assert) {
-  var user = this.subject({
-  });
+  var user = this.subject({});
   assert.strictEqual(user.get('numberOfGoals'), 0);
 });
