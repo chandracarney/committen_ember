@@ -1,6 +1,31 @@
-<h3>Dashboard for User</h3>
+<div id="subheader" class="row">
+  <div class="small-7 columns"></div>
+  <div class="small-5 columns">
+    <h6><span class="hot">Commiten</span>Dashboard</h6>
+  </div>
+</div>
 
-<div class="user">
+<div id="lineChart" style="width: 700px; height: 250px"></div>
+  <script>
+    $('#lineChart').epoch({
+    type: 'line',
+    data: lineChartData
+    });
+</script>
+
+<div class="row">
+  <h6>Commit History</h6>
+  {{#each commit in commits}}
+  <div class="small-6 columns">
+    <p>{{commit.date}}</p>
+    <p>{{commit.message}}</p>
+    <a href="">Check me out on GitHub</a>
+  </div>
+  {{/each}}
+</div>
+
+
+<div class="row">
   <img {{bind-attr src=thumbnailUrl}}>
   {{#if editing}}
     <label>Username</label>
@@ -21,7 +46,8 @@
   {{/if}}
 </div>
 
-<div class="commits">
+
+<div class="row">
   {{#each commit in commits}}
     <p>{{commit.date}}</p>
     <p>{{commit.message}}</p>
@@ -29,25 +55,11 @@
   {{/each}}
 </div>
 
-<div class="goals">
+<div class="row">
   {{#each goal in goals}}
-    <p>{{goal.title}}</p>
-    <p>{{goal.description}}</p>
-    <p>Start date: {{goal.startDate}}</p>
-    <p>End date: {{goal.endDate}}</p>
-    <p>Commits per day: {{goal.dailyQuantity}}</p>
-    <label>Mark as completed</label>
-      {{input type="checkbox" checked=goal.completed}}
-    <p>
-      {{#if goal.completed}}
-        This goal is complete!
-      {{else}}
-        You're still working on this goal
-      {{/if}}
-    </p>
-    <label>Mark as completed</label>
-    {{input type="checkbox" checked=goal.completed}}
-    <p>{{goal.dailyQuantity}}</p>
+  <div class="small-6 columns">
+    {{user-goal goal=goal}}
+  </div>
   {{/each}}
   {{#link-to 'goal.new'}}
     Make a goal

@@ -25,10 +25,19 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 100%;
   padding: 25px;
   height: 80px;
-  margin-bottom: 90px;
+}
+
+#subheader {
+  max-width: 100%;
+  padding: 25px;
+  height: 80px;
+  margin-top: -80px;
+  margin-bottom: 30px;
+  text-align: right;
 }
 
 #home-headline {
+  margin-top: 90px;
   text-align: center;
 }
 
@@ -72,4 +81,25 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #ECF0D6;
 }
 
+#login {
+  margin-bottom: 90px;
+}
 
+#footer {
+  max-width: 100%;
+  padding: 20px;
+  height: 200px;
+  color: #F04E22;
+  background-color: #ECF0D6;
+  font-size: 10px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+.foot-copy {
+  margin-top: 75px;
+}
+
+.hot {
+  color: #F04E22;
+}
