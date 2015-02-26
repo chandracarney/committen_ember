@@ -16,5 +16,6 @@ export default Ember.ObjectController.extend({
         this.set('editing', false);
       }.bind(this));
     }
-  }
+  },
+
 });
