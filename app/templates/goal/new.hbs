@@ -2,14 +2,14 @@
 
 <div class="row">
   <label>Title</label>
-  {{input type="text" value=title}}
+  {{input type="text" value=title class="goal-title"}}
   <label>Description</label>
-  {{textarea value=description}}
+  {{textarea value=description class="goal-description"}}
   <label>Start Date</label>
-  {{input type="date" value=startDate}}
+  {{input type="date" value=startDate class="goal-start-date"}}
   <label>End Date</label>
-  {{input type="date" value=endDate}}
+  {{input type="date" value=endDate class="goal-end-date"}}
   <label>Number of commits per day</label>
-  {{input type="number" value=dailyQuantity}}
+  {{input type="number" value=dailyQuantity class="goal-quantity"}}
   <button {{action 'stopEditing'}}>Submit</button>
 </div>
