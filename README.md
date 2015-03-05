@@ -3,8 +3,7 @@
 [![Circle CI](https://circleci.com/gh/trayo/committen_ember.svg?style=svg)](https://circleci.com/gh/trayo/committen_ember)
 [![Code Climate](https://codeclimate.com/github/trayo/committen_ember/badges/gpa.svg)](https://codeclimate.com/github/trayo/committen_ember)
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Welcome to Committen! Committen is an Ember app with a Rails backend that allows users to track their Github commits. It also provides the user the ability to set up commit goals that they want to reach based on time frame, such as two commits per day. Future features will allow a user to sign up with their Twitter account and allow the user to easily post tweets regarding the status of their goals. The user can also set up e-mail notifications to remind them to meet their goals.
 
 Created by: [Chandra Carney](https://github.com/chandracarney), [Sam Kuhlmann](https://github.com/skuhlmann) and [Travis Yoder](https://github.com/trayo)
 
