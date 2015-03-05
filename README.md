@@ -3,10 +3,10 @@
 [![Circle CI](https://circleci.com/gh/trayo/committen_ember.svg?style=svg)](https://circleci.com/gh/trayo/committen_ember)
 [![Code Climate](https://codeclimate.com/github/trayo/committen_ember/badges/gpa.svg)](https://codeclimate.com/github/trayo/committen_ember)
 
-Created by: Chandra Carney, Sam Kuhlmann and Travis Yoder
-
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
+
+Created by: [Chandra Carney](https://github.com/chandracarney), [Sam Kuhlmann](https://github.com/skuhlmann) and [Travis Yoder](https://github.com/trayo)
 
 ## Prerequisites
 
