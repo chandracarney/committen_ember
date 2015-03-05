@@ -8,6 +8,7 @@ A short introduction of this app could easily go here.
 
 Created by: [Chandra Carney](https://github.com/chandracarney), [Sam Kuhlmann](https://github.com/skuhlmann) and [Travis Yoder](https://github.com/trayo)
 
+
 ## Requirements
 
 You will need the following things properly installed on your computer.
@@ -18,6 +19,7 @@ You will need the following things properly installed on your computer.
 * [Ember CLI](http://www.ember-cli.com/)
 * [PhantomJS](http://phantomjs.org/)
 
+
 ## Installation
 
 * Clone the repo  
@@ -27,31 +29,33 @@ You will need the following things properly installed on your computer.
 `$ cd committen_ember`
 
 * Run Node and Bower installation commands  
-`$ npm install`
+`$ npm install`  
 `$ bower install`
+
 
 ## Running / Development
 
 * `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+* Visit the app at [http://localhost:4200](http://localhost:4200).
 
-### Code Generators
 
-Make use of the many generators for code, try `ember help generate` for more details
+## Running / Development with the Rails backend server
+
+* `ember server --proxy http://localhost:3000`
+* Visit the app at [http://localhost:4200](http://localhost:4200).
+
 
 ### Running Tests
 
 * `ember test`
 * `ember test --server`
 
+
 ### Building
 
 * `ember build` (development)
 * `ember build --environment production` (production)
 
-### Deploying
-
-Specify what it takes to deploy your app.
 
 ## Further Reading / Useful Links
 
