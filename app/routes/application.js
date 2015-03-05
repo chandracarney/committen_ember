@@ -9,7 +9,7 @@ export default Ember.Route.extend({
     signInViaGithub: function() {
       var route = this;
 
-      this.get('session').open('github-oauth2').then(function(){
+      this.get('session').open('github-oauth2').then(function(authorization){
         alert('Success! Redirecting you to Dashboard');
         // do the things after login, like redirect to dashboard
       }, function(error) {
