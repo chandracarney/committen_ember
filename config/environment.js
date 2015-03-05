@@ -20,11 +20,25 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
-    // ENV.APP.LOG_RESOLVER = true;
-    // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    // ENV.APP.LOG_TRANSITIONS = true;
-    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.APP.LOG_ACTIVE_GENERATION = true;
+    ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.hotStreak = {
+      sessionUrl: 'http://localhost:4200/api/sessions'
+    }
+
+    ENV.torii = {
+      sessionServiceName: 'session',
+      providers: {
+        'github-oauth2': {
+          apiKey: '',
+          redirectUri: 'http://localhost:4200',
+        }
+      }
+    };
+
+    ENV.contentSecurityPolicy = {
+      'connect-src': "'self' http://localhost:9000"
+    }
   }
 
   if (environment === 'test') {
@@ -40,7 +54,19 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+    ENV.torii = {
+      sessionServiceName: 'session',
+      providers: {
+        'github-oauth2': {
+          apiKey: '',
+          redirectUri: 'http://committen.herokuapp.com',
+        }
+      }
+    }
 
+    ENV.hotStreak = {
+      sessionUrl: '/__/proxy/api/sessions'
+    }
   }
 
   return ENV;
