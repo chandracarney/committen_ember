@@ -1,8 +1,8 @@
 <div class="row">
-  <div id="home-headline" class="small-12 small-centered columns">
-    <p class="large-content">Welcome to</p>
-    <h1>Committen</h1>
-  </div>
+<div id="home-headline" class="small-12 small-centered columns">
+  <p class="large-content">Welcome to</p>
+  <h1>Committen</h1>
+</div>
 </div>
 
 <div id="home-content" class="row">
@@ -18,18 +18,22 @@
 </div>
 
 <div id="login" class="row">
-  {{#if session.isWorking}}
-    Signing you in...
+  {{#if session.currentUser}}
+    Welcome {{session.currentUser.name}}
   {{else}}
-    {{error}}
-    {{#if session.isAuthenticated}}
-      <div id="home-button" class="small-11 small-centered columns">
-        <button class="button primary-btn" {{action 'closeSession'}}>Logout</button>
-      </div>
+    {{#if session.isWorking}}
+    Signing you in...
     {{else}}
-      <div id="home-button" class="small-11 small-centered columns">
-        <button class="button primary-btn" {{action 'signInViaGithub'}}>Log in with GitHub</button>
-      </div>
+      {{error}}
+        {{#if session.isAuthenticated}}
+          <div id="home-button" class="small-11 small-centered columns">
+          <button class="button primary-btn" {{action 'closeSession'}}>Logout</button>
+        </div>
+      {{else}}
+        <div id="home-button" class="small-11 small-centered columns">
+          <button class="button primary-btn" {{action 'signInViaGithub'}}>Log in with GitHub</button>
+        </div>
+      {{/if}}
     {{/if}}
   {{/if}}
 </div>
