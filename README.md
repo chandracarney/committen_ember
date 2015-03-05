@@ -8,7 +8,7 @@ A short introduction of this app could easily go here.
 
 Created by: [Chandra Carney](https://github.com/chandracarney), [Sam Kuhlmann](https://github.com/skuhlmann) and [Travis Yoder](https://github.com/trayo)
 
-## Prerequisites
+## Requirements
 
 You will need the following things properly installed on your computer.
 
