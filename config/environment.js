@@ -58,10 +58,15 @@ module.exports = function(environment) {
       sessionServiceName: 'session',
       providers: {
         'github-oauth2': {
-          apiKey: '46f6d2ee97ee37afb39c',
+          apiKey: '195936f3c943104b8c08',
           redirectUri: 'http://committen.herokuapp.com',
         }
       }
+
+    }
+
+    ENV.contentSecurityPolicy = {
+      'connect-src': "'self' http://committen-rails.herokuapp.com"
     }
 
     ENV.hotStreak = {
