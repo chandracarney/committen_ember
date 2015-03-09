@@ -19,21 +19,18 @@
 
 <div id="login" class="row">
   {{#if session.currentUser}}
-    Welcome {{session.currentUser.name}}
+    Welcome {{session.currentUser.nickname}}
+        <div id="home-button" class="small-11 small-centered columns">
+          <button class="button primary-btn" {{action 'closeSession'}}>Logout</button>
+        </div>
   {{else}}
     {{#if session.isWorking}}
     Signing you in...
     {{else}}
       {{error}}
-        {{#if session.isAuthenticated}}
-          <div id="home-button" class="small-11 small-centered columns">
-          <button class="button primary-btn" {{action 'closeSession'}}>Logout</button>
-        </div>
-      {{else}}
-        <div id="home-button" class="small-11 small-centered columns">
-          <button class="button primary-btn" {{action 'signInViaGithub'}}>Log in with GitHub</button>
-        </div>
-      {{/if}}
+      <div id="home-button" class="small-11 small-centered columns">
+        <button class="button primary-btn" {{action 'signInViaGithub'}}>Log in with GitHub</button>
+      </div>
     {{/if}}
   {{/if}}
 </div>

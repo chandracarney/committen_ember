@@ -8,9 +8,14 @@ export default Ember.Object.extend({
     });
   },
 
-  open: function(authorization){
+  open: function(authorization) {
     return this._fetchSession({
       "github-auth-code": authorization.authorizationCode
+    });
+  },
+
+  close: function(authorization) {
+    return this._fetchSession({
     });
   },
 
