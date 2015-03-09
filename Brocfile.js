@@ -17,5 +17,6 @@ app.import("bower_components/font-awesome/fonts/fontawesome-webfont.ttf", { dest
 app.import("bower_components/font-awesome/fonts/fontawesome-webfont.woff", { destDir: "fonts" });
 app.import("bower_components/font-awesome/fonts/fontawesome-webfont.woff2", { destDir: "fonts" });
 app.import("bower_components/font-awesome/fonts/FontAwesome.otf", { destDir: "fonts" });
+app.import('bower_components/highcharts-release/highcharts.src.js');
 
 module.exports = app.toTree();
