@@ -1,7 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.ObjectController.extend({
-  chartMode: 'StockChart',
 
   chartOptions: {
     chart: {

@@ -26,8 +26,8 @@ export default Ember.Controller.extend({
                    user: user,
                   };
 
-      this.store.createRecord('goal', goal).save().then(function(user) {
-        this.transitionToRoute('user', user);
+      this.store.createRecord('goal', goal).save().then(function(goal) {
+        this.transitionToRoute('user', goal.user);
       }).bind(this);
     }
 
