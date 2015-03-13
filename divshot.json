@@ -1,0 +1,19 @@
+{
+  "name": "committen",
+  "root": "./dist",
+  "routes": {
+    "/tests": "tests/index.html",
+    "/tests/**": "tests/index.html",
+    "/**": "index.html"
+  },
+  "proxy": {
+    "api": {
+      "origin": "https://committen.herokuapp.com/",
+      "headers": {
+        "Accept": "application/json"
+      },
+      "cookies": false,
+      "timeout": 30
+    }
+  }
+}

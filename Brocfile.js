@@ -3,7 +3,8 @@
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 var app = new EmberApp({
-  emberCliFontAwesome: { includeFontAwesomeAssets: false }
+  emberCliFontAwesome: { includeFontAwesomeAssets: false },
+  dotEnv: { clientAllowedKeys: ['GITHUB_CLIENT_ID'] }
 });
 
 app.import('bower_components/foundation/css/normalize.css');

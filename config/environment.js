@@ -30,7 +30,7 @@ module.exports = function(environment) {
       sessionServiceName: 'session',
       providers: {
         'github-oauth2': {
-          apiKey: '46f6d2ee97ee37afb39c',
+          apiKey: process.env.GITHUB_CLIENT_ID,
           redirectUri: 'http://localhost:4200',
         }
       }
@@ -58,8 +58,8 @@ module.exports = function(environment) {
       sessionServiceName: 'session',
       providers: {
         'github-oauth2': {
-          apiKey: '46f6d2ee97ee37afb39c',
-          redirectUri: 'http://committen.herokuapp.com',
+          apiKey: process.env.GITHUB_CLIENT_ID,
+          redirectUri: 'http://development.committen.divshot.io',
         }
       }
     }

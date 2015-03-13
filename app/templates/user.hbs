@@ -13,9 +13,9 @@
     <h6>Commit History</h6>
     {{#each commit in commits}}
     <div class="small-12 columns">
-      <p>{{commit.date}}</p>
-      <p>{{commit.message}}</p>
-      <a href="">Check me out on GitHub</a>
+      {{commit.date}}
+      {{commit.message}} 
+      <p><a href="">See full commit on GitHub</a></p>
     </div>
     {{/each}}
 
